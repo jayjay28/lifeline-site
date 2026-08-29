@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lifeline Privacy Policy</title>
+</head>
+<body>
+
+<style>
+  :root {
+    --ground: #faf8f4; --raised: #f6f1e7; --rule: #e2ded5;
+    --ink: #302d28; --muted: #6b6459; --faint: #9a9186;
+    --teal: #1f6157;
+    --serif: ui-serif, "New York", Charter, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131417; --raised: #1a1c21; --rule: #2a2d34;
+      --ink: #e8e9ec; --muted: #9aa0ab; --faint: #757b87; --teal: #6fb3a5;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131417; --raised: #1a1c21; --rule: #2a2d34;
+    --ink: #e8e9ec; --muted: #9aa0ab; --faint: #757b87; --teal: #6fb3a5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); font-size: 16.5px; line-height: 1.65;
+    margin: 0; padding: 0 24px 90px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  header { padding: 70px 0 30px; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
+  .mark {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--teal); margin: 0 0 16px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(30px, 5vw, 40px);
+    font-weight: 500; margin: 0 0 10px; line-height: 1.1;
+  }
+  .updated { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+  h2 {
+    font-family: var(--serif); font-size: 21px; font-weight: 600;
+    margin: 36px 0 8px;
+  }
+  p, li { margin: 0 0 12px; max-width: 60ch; }
+  ul { padding-left: 20px; margin: 0 0 12px; }
+  li { margin-bottom: 6px; }
+  .highlight {
+    background: var(--raised); border: 1px solid var(--rule);
+    border-left: 3px solid var(--teal); border-radius: 8px;
+    padding: 14px 18px; margin: 16px 0;
+  }
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 12px; color: var(--faint);
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="mark">Lifeline</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: August 29, 2026</p>
+  </header>
+
+  <p>Lifeline is a personal, local-first application that helps its user keep track of obligations and open loops found in their own communications. This policy describes what data Lifeline touches and what happens to it.</p>
+
+  <h2>What data Lifeline accesses</h2>
+  <ul>
+    <li><b>Gmail</b> (read-only): email messages and attachments from the connected Google account.</li>
+    <li><b>Google Calendar</b> (read-only): calendar events from the connected Google account.</li>
+    <li><b>iMessage</b>: messages stored locally on the user's own Mac.</li>
+    <li><b>macOS Contacts and Calendar</b>: names and events stored locally on the user's own Mac.</li>
+  </ul>
+
+  <h2>Where the data lives</h2>
+  <p>All data Lifeline collects is stored in a local database on the user's own computer. Lifeline operates no cloud service, no remote server, and no third-party analytics. Data is accessible from the user's own devices only, over the user's own private network.</p>
+
+  <h2>How the data is used</h2>
+  <p>Lifeline reads communications to identify tasks, commitments, deadlines, and useful context for the user — and for no other purpose. Limited excerpts of message content are sent to AI model providers (Anthropic and Google) solely to perform this analysis on the user's behalf; those excerpts are not used by Lifeline for anything else, and no data is sold, shared with data brokers, or used for advertising, ever.</p>
+
+  <div class="highlight">
+    <p style="margin:0"><b>Google user data — Limited Use.</b> Lifeline's use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" style="color:var(--teal)">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing features described above, is never sold, never used for advertising, and never transferred except to AI model providers as necessary to provide those features, as permitted for user-facing features.</p>
+  </div>
+
+  <h2>Human access</h2>
+  <p>No humans other than the user read the data. There is no Lifeline team, support staff, or moderation pipeline with access — the software runs entirely under the user's own accounts on the user's own hardware.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Data persists in the local database until the user deletes it. The user can delete any extracted item, thread, or fact from within the app, purge all extracted data with a single command, or delete the entire database file at any time. Disconnecting the Google account (or revoking access at <a href="https://myaccount.google.com/permissions" style="color:var(--teal)">myaccount.google.com/permissions</a>) immediately stops all access to Google data.</p>
+
+  <h2>Security</h2>
+  <p>The local database is protected by the user's own device security (macOS user account and disk encryption). Remote access from the user's phone travels over a private, end-to-end encrypted network (Tailscale) reachable only by the user's own enrolled devices. OAuth tokens are stored locally and never leave the machine.</p>
+
+  <h2>Changes</h2>
+  <p>If Lifeline's data practices change, this page will be updated, with the date above revised.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <b>clyonkj@gmail.com</b>.</p>
+
+  <footer>Lifeline · a personal, local-first project</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lifeline</title>
+</head>
+<body>
+
+<style>
+  :root {
+    --ground: #faf8f4; --raised: #f6f1e7; --rule: #e2ded5;
+    --ink: #302d28; --muted: #6b6459; --faint: #9a9186;
+    --teal: #1f6157; --rust: #a84124;
+    --serif: ui-serif, "New York", Charter, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131417; --raised: #1a1c21; --rule: #2a2d34;
+      --ink: #e8e9ec; --muted: #9aa0ab; --faint: #757b87;
+      --teal: #6fb3a5; --rust: #e0785a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131417; --raised: #1a1c21; --rule: #2a2d34;
+    --ink: #e8e9ec; --muted: #9aa0ab; --faint: #757b87;
+    --teal: #6fb3a5; --rust: #e0785a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); font-size: 17px; line-height: 1.65;
+    margin: 0; padding: 0 24px 90px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  header { padding: 90px 0 40px; }
+  .mark {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--teal); margin: 0 0 20px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(40px, 7vw, 58px);
+    line-height: 1.05; font-weight: 500; letter-spacing: -.015em;
+    margin: 0 0 20px; text-wrap: balance;
+  }
+  .lede {
+    font-family: var(--serif); font-size: clamp(19px, 2.5vw, 22px);
+    color: var(--muted); line-height: 1.5; margin: 0; max-width: 30ch;
+  }
+  section { margin: 56px 0 0; }
+  h2 {
+    font-family: var(--serif); font-size: 24px; font-weight: 500;
+    margin: 0 0 10px;
+  }
+  p { margin: 0 0 14px; max-width: 58ch; }
+  .quiet { color: var(--muted); }
+  .loops { display: grid; gap: 12px; margin: 22px 0 0; }
+  .loop {
+    background: var(--raised); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 15px 18px;
+  }
+  .loop b { font-family: var(--serif); font-size: 17px; font-weight: 600; display: block; margin-bottom: 3px; }
+  .loop span { font-size: 14.5px; color: var(--muted); }
+  footer {
+    margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 12px; color: var(--faint); line-height: 1.8;
+  }
+  footer a { color: var(--teal); }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="mark">Lifeline</p>
+    <h1>The open loops in your head, carried for you</h1>
+    <p class="lede">A personal app that reads your own messages and mail — on your own machine — and keeps track of what you'd otherwise keep in your head.</p>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <p>Life arrives as messages: the bill in an email, the promise in a text, the school form in a PDF nobody opened. Lifeline watches your own iMessage and Gmail, notices the obligations hiding inside ordinary conversation, and turns them into <i>threads</i> — open loops it works quietly in the background.</p>
+    <div class="loops">
+      <div class="loop"><b>It notices</b><span>"We still owe the sitter" becomes a thread before you've thought about it twice.</span></div>
+      <div class="loop"><b>It works</b><span>Research, price checks, drafts, deadline watching — done while you're living your life.</span></div>
+      <div class="loop"><b>It closes</b><span>When the reply arrives or the payment clears, the loop closes itself. Fewer threads is the whole point.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where your data lives</h2>
+    <p>On your Mac. Lifeline is local-first software: your messages, mail, calendar, and everything derived from them stay in a database on your own computer. There is no Lifeline cloud, no account, and no server of ours holding your life. The details are in the <span class="quiet">privacy policy</span> linked below.</p>
+  </section>
+
+  <section>
+    <h2>Who it's for</h2>
+    <p>Right now: one person, whose life it runs on. Lifeline is a personal project in active development — the reference implementation of an idea about how software should carry attention, not demand it.</p>
+  </section>
+
+  <footer>
+    Lifeline · a personal, local-first project<br>
+    contact: clyonkj@gmail.com<br>
+    privacy policy: see the companion page shared alongside this one
+  </footer>
+</div>
+
+</body>
+</html>
