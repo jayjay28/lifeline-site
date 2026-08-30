@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setting up Lifeline</title>
+<style>
+  :root {
+    --ground: #faf8f4; --raised: #f6f1e7; --rule: #e2ded5;
+    --ink: #302d28; --muted: #6b6459; --faint: #9a9186;
+    --teal: #1f6157;
+    --serif: ui-serif, "New York", Charter, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #131417; --raised: #1a1c21; --rule: #2a2d34;
+      --ink: #e8e9ec; --muted: #9aa0ab; --faint: #757b87; --teal: #6fb3a5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); font-size: 16.5px; line-height: 1.65;
+    margin: 0; padding: 0 24px 90px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  header { padding: 70px 0 30px; border-bottom: 1px solid var(--rule); margin-bottom: 40px; }
+  .mark {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--teal); margin: 0 0 16px;
+  }
+  .mark a { color: var(--teal); text-decoration: none; }
+  h1 {
+    font-family: var(--serif); font-size: clamp(30px, 5vw, 40px);
+    font-weight: 500; margin: 0 0 10px; line-height: 1.1;
+  }
+  .lede { font-family: var(--serif); font-size: 19px; color: var(--muted); margin: 0; max-width: 44ch; }
+  h2 {
+    font-family: var(--serif); font-size: 21px; font-weight: 600;
+    margin: 40px 0 8px;
+  }
+  h2 .n {
+    font-family: var(--mono); font-size: 13px; color: var(--teal);
+    border: 1px solid var(--teal); border-radius: 50%;
+    display: inline-grid; place-items: center; width: 24px; height: 24px;
+    margin-right: 8px; vertical-align: 2px;
+  }
+  p, li { margin: 0 0 12px; max-width: 60ch; }
+  ul { padding-left: 20px; margin: 0 0 12px; }
+  li { margin-bottom: 8px; }
+  .highlight {
+    background: var(--raised); border: 1px solid var(--rule);
+    border-left: 3px solid var(--teal); border-radius: 8px;
+    padding: 14px 18px; margin: 16px 0;
+  }
+  .highlight p { margin: 0; }
+  .quiet { color: var(--faint); font-size: 14px; }
+  a { color: var(--teal); }
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 12px; color: var(--faint); line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="mark"><a href="/">Lifeline</a></p>
+    <h1>Setting it up</h1>
+    <p class="lede">Ten minutes, two machines, and your life never leaves your own computer. Here's the whole thing, simply.</p>
+  </header>
+
+  <h2><span class="n">1</span>Why there are two pieces</h2>
+  <p>Lifeline is an app on your phone <span class="quiet">(it appears there as <b>Loose&nbsp;Ends</b>)</span> and an <b>engine</b> on your Mac. The engine is the part that reads your mail, messages, and calendar — and it runs on a computer <i>you</i> own, because the whole point is that nobody else ever holds your life. The phone app is just the window into it.</p>
+  <p>So you need: an iPhone, a Mac that stays switched on (an old laptop in a drawer works fine), and about ten minutes.</p>
+
+  <h2><span class="n">2</span>Put the engine on your Mac</h2>
+  <p>One command in Terminal installs it. When it finishes, a setup page opens in your browser and takes over — you won't touch the Terminal again.</p>
+  <div class="highlight">
+    <p>Lifeline is in active development. The one-command installer ships with the first public release — if you're reading this before then, the engine is built from source.</p>
+  </div>
+
+  <h2><span class="n">3</span>The setup page does the rest</h2>
+  <p>Four things, and the page walks you through each one, checking its own work as it goes:</p>
+  <ul>
+    <li><b>Your own Google connection.</b> You sign in, and the wizard builds a private Google project that only you will ever use — that's what keeps your mail strictly between you and Google. Three clicks are yours; the page points at every one.</li>
+    <li><b>Permission to read Messages.</b> One switch in System Settings. The page opens the exact pane and tells you the moment it worked.</li>
+    <li><b>A Claude key.</b> The engine reads your life with Claude, billed to your own key from <a href="https://console.anthropic.com">console.anthropic.com</a>. It's stored on your Mac and nowhere else.</li>
+    <li><b>Pair your phone.</b> Open the app, scan the code on the Mac's screen. Done.</li>
+  </ul>
+
+  <h2><span class="n">4</span>How you know it's working</h2>
+  <p>The app fills with the open loops found in your own mail and messages — each one worked quietly in the background. Your phone buzzes for exactly three things: an answer to something you added yourself, a deadline inside a day, or a drafted message ready to send. Everything else waits politely in the app.</p>
+
+  <h2>Where your data goes</h2>
+  <p>Nowhere. The engine keeps everything in a database on your Mac. There is no Lifeline cloud, and notifications are delivered by a relay that can't read them — it only ever carries a knock, and your phone fetches the words from your own machine. The details are in the <a href="/privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    Lifeline · a personal, local-first project<br>
+    <a href="/">home</a> · <a href="/privacy.html">privacy</a> · <a href="/terms.html">terms</a><br>
+    contact: clyonkj@gmail.com
+  </footer>
+</div>
+</body>
+</html>
